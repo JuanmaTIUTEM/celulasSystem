@@ -1,0 +1,284 @@
+/* ===========================
+   Estilo institucional global
+   =========================== */
+
+:root {
+    --bs-primary: #0b5ed7; /* Azul institucional */
+    --bs-secondary: #6c757d;
+    --bs-font-sans-serif: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #EAFBF2 !important; ;
+    font-family: var(--bs-font-sans-serif);
+    padding-top: 56px; /* altura estándar del navbar */
+}
+
+/* Card login */
+.card {
+    border-radius: 0.75rem;
+}
+
+/* Logo */
+.logo-institucional {
+    max-height: 110px;
+}
+
+/* Ajuste ancho 50% solo en desktop */
+@media (min-width: 768px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+    /*Textos*/
+
+    .cardInfo {
+        font-size: 10px !important;
+    }
+    .cardtxt {
+    font-size: 11px;
+}
+
+}
+
+
+
+/*Textos*/
+
+.cardInfo {
+    font-size: 12px;
+}
+
+.cardtxt {
+    font-size: 13px;
+}
+
+.colorGray{
+    background-color: #EAFBF2;
+}
+
+.fondoOficial{
+  background-color: #0f766e !important;  
+}
+.bg-fondoOf{
+  background-color: #C4F3DB !important;  
+}
+
+.bg-fondoBody{
+  background-color: #EAFBF2 !important;  
+}
+.txtTitleC{
+    color:white !important;
+}
+
+
+
+/*Imagenes y logos*/
+
+.logo-navbar{
+    width: 100px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/*Imagenes Cards*/
+.card-counter {
+    position: relative;
+}
+
+
+.card-counter {
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-counter:hover {
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.18),
+        0 4px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.badge-counter {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.card-img-fixed {
+    height: 160px;          /* Altura fija uniforme */
+    width: 100%;
+    object-fit: contain;   /* No recorta, no deforma */
+    background-color: #f8f9fa; /* Fondo neutro para imágenes más pequeñas */
+    padding: 12px;
+}
+
+.card.card-counter {
+    border: 0 !important;
+}
+@media (max-width: 576px) {
+
+    .badge-counter {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        bottom: 8px;
+        right: 8px;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .badge-counter {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*SIDEBAR pantallas grandes*/
+/*
+
+.sidebar {
+    position: relative;      /* ✅ vuelve al flujo
+    width: 100%;
+    min-height: calc(100vh - 56px); /* altura sin navbar 
+    font-size: 1rem;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 12px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+*/
+
+.sidebar {
+    position: sticky;
+    top: 25px; /* mismo alto del navbar */
+    height: calc(100vh - 56px);
+    background-color: #f8f9fa;
+    /*border-right: 1px solid #dee2e6;*/
+    padding-top: 1rem;
+}
+
+.sidebar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .menu li a {
+    display: block;
+    padding: 10px 16px;
+    color: #212529;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #e9ecef;
+}
+
+
+.menu a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.menu a img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.menu a:hover img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,1));
+}
+
+.menu a.active img {
+    filter: drop-shadow(0 0 12px rgba(255,255,255,1));
+}
+
+@media (max-width: 768px) {
+    .menu a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+/*SIDEBAR pantallas pequeñas*/
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        flex-direction: column;
+        gap: 4px;
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .menu a span {
+        display: none; /* Oculta texto */
+    }
+
+    .menu a img {
+        width: 28px;
+        height: 28px;
+    }
+}
