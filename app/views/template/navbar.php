@@ -19,23 +19,23 @@
                 <?php if (isset($_SESSION['usuario'])): ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Cerrar sesión</a>
+                        <a class="nav-link" href="/logout"><span style='font-size:15px;'>&#128274;</span> Cerrar sesión</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/miPerfil">Mi perfil</a>
+                        <a class="nav-link" href="/miPerfil"><span style='font-size:15px;'>&#128100;</span>Mi perfil</a>
                     </li>
 
                 <?php else: ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Iniciar sesión</a>
+                        <a class="nav-link" href="/login"><span style='font-size:15px;'>&#128275;</span> Iniciar sesión</a>
                     </li>
 
                 <?php endif; ?>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#"><span style='font-size:15px;'>&#128389;</span> Contacto</a>
                 </li>
 
             </ul>
