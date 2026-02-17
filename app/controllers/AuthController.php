@@ -76,7 +76,21 @@ class AuthController extends BaseController
         $bitacora = new Bitacora();
         $bitacora->registrar($_SESSION['usuario']['idUsuario'], 'LOGIN');
 
-        header("Location: /dashboard");
+        //header("Location: /dashboard");
+        switch ($_SESSION['usuario']['rol']) {
+
+            case 'Administrador':
+                header("Location: /dashboard");
+                break;
+
+            case 'Académico':
+                header("Location: /academico/dashboard");
+                break;
+
+            default:
+                header("Location: /dashboard");
+                break;
+        }
         exit;
     }
 

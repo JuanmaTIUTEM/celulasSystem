@@ -8,6 +8,7 @@ $router->add("/login", "AuthController@index");
 $router->add("/login/auth", "AuthController@authenticate");
 $router->add("/logout", "AuthController@logout");
 $router->add('/dashboard', 'DashboardController@index');
+$router->add('/academico/dashboard', 'AcademicoController@index');
 $router->add('/usuarios', 'UsuarioController@index');
 $router->add('/miPerfil', 'UsuarioController@miPerfil');
 $router->add('/celulas', 'CelulasController@index');
