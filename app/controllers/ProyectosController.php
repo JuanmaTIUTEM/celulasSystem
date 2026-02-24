@@ -37,4 +37,16 @@ class ProyectosController extends BaseController
         // 4. Enviar a la vista
         $this->view('proyectos/index', compact('proyectos'));
     }
+
+    public function create()
+    {
+        // 1. Usuario autenticado
+        $this->auth();
+
+        // 2. Validar rol
+        $this->role(['Académico']);
+
+        
+        $this->view('proyectos/newProyect');
+    }
 }

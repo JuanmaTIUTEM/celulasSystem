@@ -17,6 +17,13 @@
 
     <!-- CSS global -->
     <link rel="stylesheet" href="/app/assets/css/styles.css">
+
+    <!-- 1️⃣ jQuery PRIMERO -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- 3️⃣ Summernote CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs5.min.css" rel="stylesheet">
+
 </head>
 <body>
 

@@ -1,6 +1,6 @@
 <?php 
 
-	print_r($usuario['usuario']);
+	//print_r($usuario['usuario']);
 
 $user = $usuario['usuario'];
 

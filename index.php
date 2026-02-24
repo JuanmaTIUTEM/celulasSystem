@@ -13,6 +13,8 @@ $router->add('/usuarios', 'UsuarioController@index');
 $router->add('/miPerfil', 'UsuarioController@miPerfil');
 $router->add('/celulas', 'CelulasController@index');
 $router->add('/proyectos', 'ProyectosController@index');
+$router->add('/proyectos/create', 'ProyectosController@create');
+$router->add('/misProyectos', 'ProyectosController@misProyectos');
 
 $router->add('/registro', 'AuthController@register');
 $router->add('/registro/store', 'AuthController@store');
