@@ -1,69 +1,38 @@
-<div class="container-fluid">
+<div class="container mt-4">
+    <h2>Usuarios</h2>
 
-    <!-- TÍTULO -->
-    <div class="row mb-3">
-        <div class="col">
-            <h1>Gestión de Usuarios</h1>
-            <hr>
-        </div>
+    <a href="/usuarios/create" class="btn btn-primary mb-3">+ Nuevo Usuario</a>
 
-        <div class="col text-end">
-            <a href="/usuarios/create" class="btn btn-outline-primary">
-                +
-            </a>
-        </div>
-    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
 
-    <!-- TABLA -->
-    <div class="row">
-        <div class="col" class="rounded">
-            <div class="table-responsive rounded">
-                <table class="table table-bordered table-hover align-middle">
-                    <thead class="table-dark text-center">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Correo</th>
-                            <th class="d-none d-md-table-cell">Rol</th>
-                            <th class="d-none d-lg-table-cell">Puesto</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody >
-                        <?php foreach ($usuarios as $u): ?>
-                            <tr>
+        <tbody>
+            <?php foreach ($usuarios as $u): ?>
+            <tr>
+                <td><?= $u['nombrePersona'] . " " . $u['apellidosPersona'] ?></td>
+                <td><?= $u['correoInstitucional'] ?></td>
+                <td><?= $u['roles'] ? $u['roles'] : 'Sin rol asignado' ?></td>
+                <td><?= $u['bActivo'] ? 'Sí' : 'No' ?></td>
 
-                                <td class="text-center"><?= $u['idUsuario'] ?></td>
+                <td>
+                    <a href="/usuarios/edit/<?= $u['idUsuario'] ?>" class="btn btn-warning btn-sm">✏️</a>
 
-                                <td class="text-nowrap text-truncate" style="max-width: 180px;">
-                                    <?= $u['nombreCompleto'] ?>
-                                </td>
-
-                                <td class="text-nowrap text-truncate" style="max-width: 220px;">
-                                    <?= $u['correoInstitucional'] ?>
-                                </td>
-
-                                <td class="text-center d-none d-md-table-cell">
-                                    <?= $u['rol'] ?>
-                                </td>
-
-                                <td class="d-none d-lg-table-cell">
-                                    <?= $u['puesto'] ?>
-                                </td>
-
-                                <td class="text-center">
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn btn-outline-info">Ver</a>
-                                        <a class="btn btn-outline-warning">Editar</a>
-                                        <a class="btn btn-outline-danger">Bloquear</a>
-                                    </div>
-                                </td>
-
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                    <a href="/usuarios/toggle/<?= $u['idUsuario'] ?>" 
+                       class="btn btn-sm"
+                       onclick="return confirm('¿Cambiar estado?')">
+                       <?= $u['bActivo'] ? '🔴 Desactivar' : '🟢 Activar' ?>
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 </div>

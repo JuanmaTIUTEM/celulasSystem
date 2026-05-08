@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `dbsicete` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `dbsicete`;
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: dbsicete
 -- ------------------------------------------------------
--- Server version	9.5.0
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,14 +14,6 @@ USE `dbsicete`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
-SET @@SESSION.SQL_LOG_BIN= 0;
-
---
--- GTID state at the beginning of the backup 
---
-
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ 'a9932d9e-0627-11f1-908a-00e04c36332d:1-112';
 
 --
 -- Table structure for table `bitacora_accesos`
@@ -40,7 +30,7 @@ CREATE TABLE `bitacora_accesos` (
   `userAgent` varchar(255) DEFAULT NULL,
   `fecha` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idBitacora`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +39,7 @@ CREATE TABLE `bitacora_accesos` (
 
 LOCK TABLES `bitacora_accesos` WRITE;
 /*!40000 ALTER TABLE `bitacora_accesos` DISABLE KEYS */;
-INSERT INTO `bitacora_accesos` VALUES (1,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 07:57:31'),(2,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 08:06:18'),(3,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 08:06:20'),(4,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:27:39'),(5,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:27:40'),(6,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:28:12'),(7,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:28:13'),(8,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:29:40'),(9,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:29:41');
+INSERT INTO `bitacora_accesos` VALUES (1,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 07:57:31'),(2,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 08:06:18'),(3,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 08:06:20'),(4,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:27:39'),(5,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:27:40'),(6,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:28:12'),(7,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:28:13'),(8,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:29:40'),(9,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0','2026-02-10 09:29:41'),(10,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-16 19:54:09'),(11,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-16 19:54:16'),(12,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-16 19:54:16'),(13,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 10:19:16'),(14,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 10:19:35'),(15,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 10:21:41'),(16,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 10:25:51'),(17,2,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 10:25:59'),(18,2,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 11:08:28'),(19,2,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 11:08:38'),(20,2,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-17 11:09:16'),(21,2,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36','2026-02-24 11:13:42'),(22,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-13 18:13:37'),(23,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-13 18:16:04'),(24,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-13 18:16:19'),(25,1,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-13 18:16:30'),(26,2,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-13 18:17:04'),(27,2,'LOGOUT','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-14 09:18:25'),(28,1,'LOGIN','::1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36','2026-04-14 09:18:37');
 /*!40000 ALTER TABLE `bitacora_accesos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,6 +143,37 @@ LOCK TABLES `documentos` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `grupos`
+--
+
+DROP TABLE IF EXISTS `grupos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `grupos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `clave` varchar(20) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `carrera` varchar(150) NOT NULL,
+  `semestre` int NOT NULL,
+  `turno` enum('matutino','vespertino') NOT NULL,
+  `capacidad` int DEFAULT '30',
+  `activo` tinyint(1) DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unica_clave` (`clave`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `grupos`
+--
+
+LOCK TABLES `grupos` WRITE;
+/*!40000 ALTER TABLE `grupos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `grupos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `integrante`
 --
 
@@ -204,7 +225,7 @@ CREATE TABLE `persona` (
   PRIMARY KEY (`idPersona`),
   UNIQUE KEY `clavePersona` (`clavePersona`),
   UNIQUE KEY `curpPersona` (`curpPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +234,7 @@ CREATE TABLE `persona` (
 
 LOCK TABLES `persona` WRITE;
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (1,'PER5087','Juan Manuel','Fernández Alvarez',NULL,NULL,NULL,NULL,'CURP2959','RFC9536',NULL,NULL,'2026-02-10 13:37:25');
+INSERT INTO `persona` VALUES (1,'PER5087','Juan Manuel','Fernández Alvarez',NULL,NULL,NULL,NULL,'CURP2959','RFC9536',NULL,NULL,'2026-02-10 13:37:25'),(2,'PER8668','Juan Manuel','Fernandez Alvarez',NULL,NULL,NULL,NULL,'CURP8292','RFC5460',NULL,NULL,'2026-02-17 16:21:26');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -350,6 +371,30 @@ LOCK TABLES `proyecto` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `rol`
+--
+
+DROP TABLE IF EXISTS `rol`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `rol` (
+  `idRol` int NOT NULL AUTO_INCREMENT,
+  `nombreRol` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idRol`),
+  UNIQUE KEY `nombreRol` (`nombreRol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rol`
+--
+
+LOCK TABLES `rol` WRITE;
+/*!40000 ALTER TABLE `rol` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rol` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `titular`
 --
 
@@ -399,7 +444,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `correoInstitucional` (`correoInstitucional`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -408,8 +453,34 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'USR8803',1,'manuel-fernandez@utem.edu.mx','306d3c9207781aae7d3587a411bca58d','Administrador','2026-02-10 13:37:25',_binary '');
+INSERT INTO `usuario` VALUES (1,'USR8803',1,'manuel-fernandez@utem.edu.mx','a005a4777f8a90774460256b7f36af7a','Administrador','2026-02-10 13:37:25',_binary ''),(2,'USR2421',2,'juan-fernandez@utem.edu.mx','a005a4777f8a90774460256b7f36af7a','Académico','2026-02-17 16:21:26',_binary '');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuario_rol`
+--
+
+DROP TABLE IF EXISTS `usuario_rol`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `usuario_rol` (
+  `idUsuario` int NOT NULL,
+  `idRol` int NOT NULL,
+  PRIMARY KEY (`idUsuario`,`idRol`),
+  KEY `fk_usuarioRol_rol` (`idRol`),
+  CONSTRAINT `fk_usuarioRol_rol` FOREIGN KEY (`idRol`) REFERENCES `rol` (`idRol`) ON DELETE CASCADE,
+  CONSTRAINT `fk_usuarioRol_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario_rol`
+--
+
+LOCK TABLES `usuario_rol` WRITE;
+/*!40000 ALTER TABLE `usuario_rol` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario_rol` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -477,156 +548,6 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Dumping routines for database 'dbsicete'
---
-/*!50003 DROP PROCEDURE IF EXISTS `sp_registrar_usuario_persona` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb3 */ ;
-/*!50003 SET character_set_results = utf8mb3 */ ;
-/*!50003 SET collation_connection  = utf8mb3_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_registrar_usuario_persona`(
-    IN p_clavePersona VARCHAR(10),
-    IN p_nombre VARCHAR(100),
-    IN p_apellidos VARCHAR(150),
-    IN p_email VARCHAR(150),
-    IN p_telefono VARCHAR(20),
-    IN p_genero ENUM('Masculino','Femenino','Otro'),
-    IN p_fechaNacimiento DATE,
-    IN p_curp VARCHAR(20),
-    IN p_rfc VARCHAR(15),
-    IN p_institucion VARCHAR(150),
-    IN p_puesto VARCHAR(100),
-
-    IN p_claveUsuario VARCHAR(10),
-    IN p_correoInstitucional VARCHAR(100),
-    IN p_contrasena VARCHAR(255),
-    IN p_rol ENUM('Administrador','Académico','Coordinador','Dirección','Rectoría','Alumno','Empresario','Vinculación')
-)
-BEGIN
-    DECLARE v_idPersona INT;
-
-    DECLARE EXIT HANDLER FOR SQLEXCEPTION
-    BEGIN
-        ROLLBACK;
-        SELECT 'Error al registrar persona o usuario' AS mensaje;
-    END;
-
-    START TRANSACTION;
-
-    -- Insertar persona
-    INSERT INTO persona (
-        clavePersona, nombrePersona, apellidosPersona, emailContacto,
-        telefonoContacto, genero, fechaNacimiento, curpPersona, rfcPersona,
-        institucion, puesto
-    )
-    VALUES (
-        p_clavePersona, p_nombre, p_apellidos, p_email,
-        p_telefono, p_genero, p_fechaNacimiento, p_curp, p_rfc,
-        p_institucion, p_puesto
-    );
-
-    SET v_idPersona = LAST_INSERT_ID();
-
-    -- Insertar usuario
-    INSERT INTO usuario (
-        claveUsuario, idPersona, correoInstitucional,
-        contrasena, rol, bActivo
-    )
-    VALUES (
-        p_claveUsuario, v_idPersona, p_correoInstitucional,
-        p_contrasena, p_rol, b'1'
-    );
-
-    COMMIT;
-
-    SELECT 'Usuario y persona registrados correctamente' AS mensaje, v_idPersona AS idPersona;
-
-END ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 DROP PROCEDURE IF EXISTS `sp_registro_basico_usuario` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb3 */ ;
-/*!50003 SET character_set_results = utf8mb3 */ ;
-/*!50003 SET collation_connection  = utf8mb3_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_registro_basico_usuario`(
-    IN p_nombre VARCHAR(100),
-    IN p_apellidos VARCHAR(150),
-    IN p_correo VARCHAR(100),
-    IN p_passwordMd5 VARCHAR(32)
-)
-BEGIN
-    DECLARE v_idPersona INT;
-
-    DECLARE EXIT HANDLER FOR SQLEXCEPTION
-    BEGIN
-        ROLLBACK;
-        SELECT 'Error en el registro de usuario' AS mensaje;
-    END;
-
-    START TRANSACTION;
-
-    -- Crear persona mínima
-    INSERT INTO persona (
-        clavePersona,
-        nombrePersona,
-        apellidosPersona,
-        curpPersona,
-        rfcPersona
-    )
-    VALUES (
-        CONCAT('PER', LPAD(FLOOR(RAND()*9999),4,'0')),
-        p_nombre,
-        p_apellidos,
-        CONCAT('CURP', LPAD(FLOOR(RAND()*9999),4,'0')),
-        CONCAT('RFC', LPAD(FLOOR(RAND()*9999),4,'0'))
-    );
-
-    SET v_idPersona = LAST_INSERT_ID();
-
-    -- Crear usuario SIN rol y desactivado
-    INSERT INTO usuario (
-        claveUsuario,
-        idPersona,
-        correoInstitucional,
-        contrasena,
-        rol,
-        bActivo
-    )
-    VALUES (
-        CONCAT('USR', LPAD(FLOOR(RAND()*9999),4,'0')),
-        v_idPersona,
-        p_correo,
-        p_passwordMd5,  -- ← ya viene en MD5 desde PHP
-        NULL,
-        b'0'
-    );
-
-    COMMIT;
-
-    SELECT 'Registro enviado. Pendiente de aprobación por el administrador.' AS mensaje;
-
-END ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-
---
 -- Final view structure for view `vw_celulas_coordinador`
 --
 
@@ -679,7 +600,6 @@ DELIMITER ;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
-SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -690,4 +610,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-12  8:49:10
+-- Dump completed on 2026-04-14 11:20:47

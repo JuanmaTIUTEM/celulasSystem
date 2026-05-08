@@ -20,7 +20,7 @@ class AcademicoController extends BaseController
         //$celulas = $celulasModel->getAll();
 
         // 4. Enviar a la vista
-        //$this->view('usuarios/index');//, compact('celulas'));
+        $this->view('usuarios/index');//, compact('celulas'));
         
     }
 }
